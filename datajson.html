@@ -1,0 +1,335 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Lucida, monospace;
+  padding: -10px;
+}
+
+.button {
+  background-color: orange;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  border-radius: 50%;
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #299BB2;
+}
+
+.navbar a {
+  float: left;
+  color: #11A0F3;
+  text-align: center;
+  padding: 0px 30px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 30px;  
+  border: none;
+  outline: black;
+  color: white;
+  padding: 30px 30px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 10;
+}
+
+.navbar a:hover, .dropdown:hover{
+  background-color: #11B0F4 ;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #25606C;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 30px 30px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #08649A;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.caption {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  color: #fff;
+  padding: 18px;
+  font-size: 60px;
+  letter-spacing: 10px;
+}
+
+.bgimg-4 {
+  background-image: url("gethelpnow.jpg");
+  min-height: 100%;
+}
+
+p {
+	color:#020202;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 25px Lucida, Console, monospace;
+  color: #fff;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#home"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <img src="international.png" width="100px"> </span></a>
+  <div class="dropdown">
+    <button class="dropbtn">Data 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">  
+	</div>
+	</div>
+	<div class="dropdown">
+    <button class="dropbtn">Need Help?
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Assessing the situation</a>
+      <a href="#">Comforting a victim</a>
+	</div>
+    </div>
+	<button class="button button2"><a href="gethelpnow.html">Get Help Now</a>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="creating.html">Homepage</a>
+  <a href="#">World Data</a>
+  <a href="#">Need Help?</a>
+</div>
+<head>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+body{font-family:Open Sans;}
+#select {
+	margin:20px;
+	height: 30px;
+	width: 100px;
+	border-radius: 0;
+	padding-left: 10px;
+	outline:none;
+}
+
+#info{margin-left:30px;}
+
+</style>
+<body>
+
+<div>
+	<select id="select" onchange="change()">
+		<option selected>None</option>
+	</select>
+</div>
+
+<div id="info">
+
+	<h2 id="text"> No Country Selected </h2><br/><br/>
+
+	<div id="bothyvalue"> Both Sexs 15-29: </div><br/>
+	<div id="bothovalue"> Both Sexs 30-49: </div><br/>
+	<div id="maleyvalue"> 15-29 Years Male: </div><br/>
+	<div id="maleovalue"> 30-49 Years Male: </div><br/>
+	<div id="femaleyvalue"> 15-29 Years Female: </div><br/>
+	<div id="femaleovalue"> 30-49 Years Female: </div><br/>
+
+
+
+	<br/>
+
+	<div class="container">
+	  <div class="progress">
+	    <div id="bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width:0%">
+	      <span class="sr-only">70% Complete</span>
+	    </div>
+	  </div> 
+	</div>
+</div>
+
+<!-- the div above is the progress bar (bar graph). You can adjust the length to however you want if you just call the variable from the JSON data below in Javascript, and then use the Javascript (element.stlye.width(''))to adjust the length of the bar shown to the user. -->
+
+
+
+
+<script type="text/javascript">
+
+	var staticUrl = 'https://raw.githubusercontent.com/Jaysontian/jaysontian.github.io/master/data.json'; 
+	
+	$.getJSON(staticUrl, function(data) {
+
+		var countrylistlen = data.fact.length;
+
+		for (i = 0 ; i < countrylistlen; i = i + 6) {
+			var sel = document.getElementById('select');
+			var opt = document.createElement('option');
+			var name = data.fact[i].dims.COUNTRY;
+
+			opt.appendChild(document.createTextNode(name));
+			opt.value = name;
+			sel.appendChild(opt);
+		}
+	})
+
+
+	$( "#select" ).change(function() {
+		$.getJSON(staticUrl, function(data) {
+			var e = document.getElementById("select");
+			sel2 = e.selectedIndex;
+
+
+			//INDEX FOR THE FACT
+			sel_both_y = 6*sel2 - 6	// both sexs young
+			sel_both_o = 6*sel2 - 5 // both sexs old
+			sel_male_y = 6*sel2 - 4 // males young
+			sel_male_o = 6*sel2 - 3 // males old
+			sel_female_y = 6*sel2 - 2 // females young
+			sel_female_o = 6*sel2 - 1 // females old
+			
+
+
+			var bothyvalue = data.fact[sel_both_y].Value; // both young
+			var bothovalue = data.fact[sel_both_o].Value; // both old
+			var maleyvalue = data.fact[sel_male_y].Value; // young males
+			var maleovalue = data.fact[sel_male_o].Value; // old males
+			var femaleyvalue = data.fact[sel_female_y].Value; //female young
+			var femaleovalue = data.fact[sel_female_o].Value; // female old
+
+			document.getElementById('bothyvalue').innerHTML = "Both Sexs 15-29: " + bothyvalue;
+
+			document.getElementById('bar').style.width = bothyvalue * 10 + 'px';
+
+			document.getElementById('bothovalue').innerHTML = "Both Sexs 30-49: " + bothovalue;
+			document.getElementById('maleyvalue').innerHTML = "15-29 Years Male: " + maleyvalue;
+			document.getElementById('maleovalue').innerHTML = "30-49 Years Male: " + maleovalue;
+			document.getElementById('femaleyvalue').innerHTML = "15-29 Years Female Value: " + femaleyvalue;
+			document.getElementById('femaleovalue').innerHTML = "30-49 Years Female Value: " + femaleovalue;
+
+	})
+	});
+
+	function change() { //    when the selection is changed
+		var e = document.getElementById("select");
+		var sub = e.options[e.selectedIndex].value;
+		document.getElementById('text').innerHTML = sub + " Statistics";
+		console.log('Country Selected: ' + sub)
+	}
+
+// NOTE: if the link for the JSON data is invalid or nothing is showing on the selection bar on the page, it is probably because of a server error or I took it down from my github. Just get the data and push it to your github page. Then click raw and then replace the variable STATICURL (in the above code).
+
+
+</script>
+	
+</body>
+</html>

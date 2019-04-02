@@ -1,0 +1,294 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="mycss.css">
+<link rel="icon" href="international.png" type="image/gif" sizes="16x16">
+<style>
+body {
+  font-family: Arial;
+  padding: -10px;
+  margin:0;
+  background-color: #B5D6DB;
+  transition: background-color .5s;
+}
+
+.button {
+  background-color: #11B0F4;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  border-radius: 50%;
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #299BB2;
+}
+
+.navbar a {
+  float: left;
+  color: #11A0F3;
+  text-align: center;
+  padding: 0px 30px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 30px;  
+  border: none;
+  outline: black;
+  color: white;
+  padding: 30px 30px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 10;
+}
+
+.navbar a:hover, .dropdown:hover{
+  background-color: #11B0F4 ;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #25606C;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 30px 30px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #08649A;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.caption {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  color: #fff;
+  padding: 18px;
+  font-size: 60px;
+  letter-spacing: 10px;
+}
+
+.bgimg-4 {
+  background-image: url("gethelpnow.jpg");
+  min-height: 100%;
+}
+
+p {
+	color:#020202;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 25px Lucida, Console, monospace;
+  color: #fff;
+  text-align: center;
+}
+
+table {
+   position: absolute;
+   top: 350px;
+   left: 350px;
+
+}
+
+td {
+	border: 1px solid black;
+}
+
+.flex-container {
+  display: flex;
+  justify-content:center;
+  text-align: center;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  width:300px;
+  position: relative;
+  top: 250px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 60px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "#B5D6DB";
+}
+</script>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#home"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <img src="international.png" width="100px"> </span></a>
+  <div class="dropdown">
+    <button class="dropbtn">Data 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">  
+        <a href="worldmap.html">Globe Data</a>
+        <a href="datas.html">Graph Data</a>
+	</div>
+	</div>
+	<div class="dropdown">
+    <button class="dropbtn">Need Help?
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="assess.html">Assessing the situation</a>
+      <a href="comfort.html">Comforting a victim</a>
+	</div>
+    </div>
+	<button class="button button2"><a href="gethelpnow.html">Get Help Now</a>
+</div>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="creating.html">Homepage</a>
+   <a href="data.html">Data</a>
+  <a href="needhelp.html">Need Help?</a>
+  <a href="gethelpnow.html">Get Help Now</a>
+  <a href="changes.html">Changes to design</a>
+  
+</div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<h1>Changes to my design:</h1>
+<p>After proceeding and completing my developing ideas page, there were some designs that seemed quite hard to do. However, I underestimated myself and I completed that part with time to spare. Furthermore, I decided to add a few more features that would help the aesthetics and make the page more modern. The initial design had many features within different pages. I’ll show the initial design before and what I coded in turn of that below.<br><br>
+
+Homepage:<br><br>
+
+	The homepage had a navigation bar across the top with icons on it such as logo, which would bring you back to the homepage on click. The data icon when hovered over dropped all the countries. The need help? part  when hovered dropped down 2 different selections: assessing the situation and comforting the victim. Lastly, in the nav bar, there was a get help now button that would lead to a page that would have a suicide crisis hotline number on it. <br><br>
+
+	The nav bar I coded looks almost identical to the one designed however, the buttons and icons have a sign on them. The logo icon when clicked on opens the side nav bar which you can access any part of the website. This was done because it faster to go straight to the page instead of back to the homepage and then to the wanted page. Next, the data drop down box is still a drop down but has 2 different options: Globe data and graph data. I did this because I wanted to make it easier for my target audience to identify the country they are looking for. Often, students do not know what the country names are nowadays. When trying to name a country, it is easier to decpict the country and then move to the graph data and select the country. Alongside the data dropdown was the need help drop down. There were no changes made to the initial design. Lastly, the get help now button has the same function however, on hover, there is a slight shadow to make the website more extravagant. <br><br>
+
+	The initial content of the homepage was supposed to be bland and rather boring. The big image was supposed to be a lonely person which matches the theme of the page of suicide and depression. Below the big image was supposed to be a section about the page. <br><br>
+
+	Honestly, when looking back at the design plan, I found the homepage content awful. I wanted to make the page nicer and more features. So in turn, I put in parallax scrolling. PArallax scrolling is where the mage changes when text breaks the images. It looks cool and mesmerizing in my opinion. I changed the main photo to a hand helping another hand up. While the theme is supposed to be suicide and depression all that dark stuff, I want to make the website less depressing and more supportive. I removed the about section from the homepage and wrote a bit about what suicide is and a brief sentence on what this website’s purpose is. Overall, the homepage has lots of design changes to make it more aesthetically pleasing. <br><br>
+
+
+
+Data page:<br><br>
+
+The data page’s content was rather simple and the graphs would change based on the chosen country in the scroll down bar. The country name would appear in the top left corner in big text and then there would be 6 buttons, 3 a side and on click, a graph would appear beside it corresponding to the content from the data.json data. <br><br>
+
+However, due to changes made in the nav bar, the countries would now be selected in on the “graph data” page in the top left corner in a scroll drop bar. After a country is chosen the name of the country is placed below the scroll bar. Next, the 6 categories would be lined up in one instead of split into 2 groups of 3. There will be no buttons and after the country is selected in the scroll bar, instead, the graphs would appear automatically. I removed the buttons because I feel like it would be too much of a hassle to press all 6 buttons each time a different country was selected. However, I added an svg map of the world and when you click, the name of the country appears to help identify the proper country. <br><br>
+
+Get Help Now page:<br><br>
+
+	The original get help now page had the title across the top and a little caption below in smaller font. Below, there was a table with 3 different of methods of reaching a suicide crisis hotline, by phone, by email, and by text. These 3 choices were in a table all in a row. The background would be plain sky blue<br><br>
+
+	The new design coded is practically the same however, the background of the website would be a nice blue background with designs within instead of just a plain sky blue background. In addition, instead of using a table, I used flex boxes instead because I wanted there to be space between the 3 choices not all tight and crammed together. Furthermore, the text and images blended with the chosen background so flex boxes with a white grey background would be better to read and contrast the text and images. 
+<br><br>
+List pages:
+<br><br>
+	Both of the list pages were supposed to be identical with just text of a list of phrases and questions, as well as an image beside that. <br><br>
+
+	Instead, I created 2 different list pages because I wanted some more script and more funky features instead of just plain text and a bland image. On my assessing the page, I put a picture slideshow of suicidal people being comforted by others. With this, I put some questions to assess the situation on top of the slideshow images. The images change every 5 seconds. Next, the comforting the victim page shows 6 different images and when you hover over them, the image has a blue screen go over the image with different phrases to help the victim. <br><br>
+
+
+	In conclusion, to justify these changes, I underestimated my coding skills and during this project, I exceeded my expectations and learned a lot about html, css and a little about script however, I really enjoyed coding with css and styling my page so it looks somewhat aesthetically pleasing. From this, I created extra sub headings to make the website easy to navigate. Overall, for my first actual website, this website is actually not bad. </p>
+
+
+
+
+	

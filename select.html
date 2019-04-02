@@ -1,0 +1,30 @@
+<html>
+	
+	<script src="data.json"></script>
+	
+	<select id='mysel'
+		onchange="changeSelect(this.value)">
+	</select>
+	
+	<script>
+		
+		var myoptions = "";
+		var cname = "";
+		for (i=0; i < data.length; i=i+1) {
+			if (data[i].dims.COUNTRY != cname) {
+				myoptions = myoptions + "<option>" + data[i].dims.COUNTRY + "</option>"
+				cname = data[i].dims.COUNTRY
+					}
+				}
+		
+		console.log(myoptions);
+		var pointer = document.getElementById('mysel');pointer.innerHTML = myoptions;
+		
+		function changeSelect(val) {
+			console.log(val);
+		}
+		
+	</script>
+		
+		
+</html> 
