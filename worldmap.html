@@ -280,10 +280,26 @@ path:hover {fill: blue;}
 	
 var countryElements = document.getElementById('countries').childNodes;
     var countryCount = countryElements.length;
+	
     for (var i = 0; i < countryCount; i++) {
       countryElements[i].onclick = function() {
-        alert('You clicked on ' + this.getAttribute('data-name'));
-      }
+		  var country = this.getAttribute("data-name");
+		  var totaldata = [];
+		  for(let x = 0; x < data.length; x++) {
+			  <!-- console.log(data[x].dims.COUNTRY, country) -->
+		  	if(data[x].dims.COUNTRY == country) {
+				totaldata.push(data[x].dims.COUNTRY)
+				totaldata.push(data[x].dims.SEX)
+				totaldata.push(data[x].Value);
+				<!-- console.log("FOUND IT!!!!") -->
+				<!-- alert("The suicide rate in " + country + " is " + data[x].Value); -->
+			}
+			
+		  }
+		  console.log(totaldata)
+		  alert("The suicide rates of "  +  totaldata[0] + ": " + "(per 100 000 population)" + '\n' + totaldata[1] + " in 2016: " + totaldata[2] + '\n' + totaldata[4] + " in 2015: " + totaldata[5] + '\n' + totaldata[7] + " in 2010: " + totaldata[8] + '\n' + totaldata[10] + " in 2000: " + totaldata[11] + '\n' + totaldata[13] + " in 2016: " + totaldata[14] + '\n' + totaldata[16] + " in 2015: " + totaldata[17] + '\n' + totaldata[19] + " in 2010: " + totaldata[20] + '\n' + totaldata[22] + " in 2000: " + totaldata[23] + '\n' + totaldata[25] + " in 2016: " + totaldata[26] + '\n' + totaldata[28] + " in 2015: " + totaldata[29] + '\n' + totaldata[31] + " in 2010: " + totaldata[32] + '\n' + totaldata[34] + " in 2000: " + totaldata[35] );
+		  
+		}
     }
 </script>
 
